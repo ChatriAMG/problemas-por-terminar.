@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            /*
+            function convertMiliseg (dias, horas, minutos, segundos) {
+                return (((dias * 24 + horas) * 60  + minutos) * 60 + segundos) * 1000;
+            }
+
+            const dias = prompt("Dias:");
+            const horas = prompt("horas");
+            const minutos = prompt("minutos:");
+            const segundos = prompt("segundos:");
+
+            const resultado = convertMiliseg(
+                parseInt(dias),
+                parseInt(horas),
+                parseInt(minutos),
+
+                parseInt(segundos),
+            )
+
+            console.log(`resultado: $(resultado) milisegundos`);
+            ``
+            
+*/
+
+/*
+
+
+function sumaAsincrona (a, b, segundos) {
+   console.log("cargando");
+    return new Promise(
+      resolve => {
+        setTimeout(() => {
+            resolve(a + b);
+        }, segundos * 1000);
+      }
+      
+    );
+}
+
+let puntos = "";
+const intervalo = setInterval(() => {
+   if (puntos.length >= 3) {
+    puntos = "";
+   } else {
+    puntos += ".";
+   }
+   console.clear();
+   console.log(`\rCargando ${puntos}`);
+}, 1000);
+
+sumaAsincrona(123, 14, 13).then(resultado =>{
+    clearInterval(intervalo);
+    console.clear();
+  console.log(`resultado: ${resultado}`);
+});
+
+*/
+/*
+const proxBisiestos = (desde) => {
+  let res = [];
+  let año = desde + 1;
+  
+  while(res.length < 50) {
+ if ((año % 4 === 0 && año % 100 !== 0) ||
+(año  % 400 === 0)) res.push(año);
+  año++;
+}
+  console.log(res);
+};
+
+proxBisiestos (2020)
+*/
+
+/*
+function wordMark(texto) {
+  const palabras = texto.split(' ');
+  const maximaLongitud = 
+  Math.max(...palabras.map(p => p.length));
+  const borde = '*'.repeat(maximaLongitud + 4);
+
+  console.log(borde);
+  for (const palabra of palabras) {
+    const space = ' '. repeat(maximaLongitud - palabra.length);
+    console.log(`* ${palabra}${space} *`)
+  }
+  console.log(borde);
+}
+
+wordMark("hello nigga");
+*/
+
+function biggestSecond(lista) {
+  const uniqueNumbers = [...new Set(lista)];
+  uniqueNumbers.sort((a, b) => b - a);
+   if(uniqueNumbers.length < 2) {
+    return null;
+   }
+   return uniqueNumbers[1];
+}
+const numeros = [13, 45, 83, 10, 48];
+console.log(biggestSecond(numeros));
+
+// node,js
+
+const readline = require("readline");
+
+function biggestSecond(lista) {
+  const uniqueNumbers = [...new Set(lista)];
+  uniqueNumbers.sort((a, b) => b - a);
+   if(uniqueNumbers.length < 2) {
+    return null;
+   }
+   return uniqueNumbers[1];
+}
+const rl = readline.createInterface({
+  imput: process.stdin,
+  output: process.stdout
+});
+
+rl.question("introduce el numero separado por comas: ", (input) => {
+  const numeros = input.split(",").map(n => parseInt(n.trim()));
+  console.log("segundo numero mas grande:", biggestSecond(numeros));
+  rl.close();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
