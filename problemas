@@ -100,10 +100,18 @@ function biggestSecond(lista) {
    }
    return uniqueNumbers[1];
 }
-const numeros = [13, 45, 83, 10, 48];
-console.log(biggestSecond(numeros));
+//const numeros = [13, 45, 83, 10, 48];
+//console.log(biggestSecond(numeros));
 
-// node,js
+const input = prompt("introduce los numeros: ");
+const numeros = input.split(" ").map(n => parseInt(n.trim()));
+
+console.log("segundo mas grande:", biggestSecond(numeros));
+alert(`el segundo numero mas grande es: ${biggestSecond(numeros)}`);
+
+
+
+/* node,js
 
 const readline = require("readline");
 
@@ -116,7 +124,7 @@ function biggestSecond(lista) {
    return uniqueNumbers[1];
 }
 const rl = readline.createInterface({
-  imput: process.stdin,
+  input: process.stdin,
   output: process.stdout
 });
 
@@ -126,7 +134,7 @@ rl.question("introduce el numero separado por comas: ", (input) => {
   rl.close();
 });
 
-
+*/
 
 
 
