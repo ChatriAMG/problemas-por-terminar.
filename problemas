@@ -2,32 +2,30 @@
 <html>
     <body>
         <script>
-            /*
-            function convertMiliseg (dias, horas, minutos, segundos) {
-                return (((dias * 24 + horas) * 60  + minutos) * 60 + segundos) * 1000;
-            }
+           
+/*
+function convertMiliseg (dias, horas, minutos, segundos) {
+return (((dias * 24 + horas) * 60  + minutos) * 60 + segundos) * 1000;
+}
 
-            const dias = prompt("Dias:");
-            const horas = prompt("horas");
-            const minutos = prompt("minutos:");
-            const segundos = prompt("segundos:");
+  const dias = prompt("Dias:");
+  const horas = prompt("horas");
+  const minutos = prompt("minutos:");
+  const segundos = prompt("segundos:");
 
-            const resultado = convertMiliseg(
-                parseInt(dias),
-                parseInt(horas),
-                parseInt(minutos),
+const resultado = convertMiliseg(
+  parseInt(dias),
+  parseInt(horas),
+  parseInt(minutos),
 
-                parseInt(segundos),
-            )
+  parseInt(segundos),
+)
 
-            console.log(`resultado: $(resultado) milisegundos`);
-            ``
-            
+console.log(`resultado: $(resultado) milisegundos`);
+ ``   
 */
 
 /*
-
-
 function sumaAsincrona (a, b, segundos) {
    console.log("cargando");
     return new Promise(
@@ -56,8 +54,8 @@ sumaAsincrona(123, 14, 13).then(resultado =>{
     console.clear();
   console.log(`resultado: ${resultado}`);
 });
-
 */
+
 /*
 const proxBisiestos = (desde) => {
   let res = [];
@@ -92,6 +90,7 @@ function wordMark(texto) {
 wordMark("hello nigga");
 */
 
+/*
 function biggestSecond(lista) {
   const uniqueNumbers = [...new Set(lista)];
   uniqueNumbers.sort((a, b) => b - a);
@@ -110,8 +109,8 @@ console.log("segundo mas grande:", biggestSecond(numeros));
 alert(`el segundo numero mas grande es: ${biggestSecond(numeros)}`);
 
 
+// node,js
 
-/* node,js
 
 const readline = require("readline");
 
@@ -133,8 +132,31 @@ rl.question("introduce el numero separado por comas: ", (input) => {
   console.log("segundo numero mas grande:", biggestSecond(numeros));
   rl.close();
 });
-
 */
+
+
+function cicloSexagenario(año) {
+  const elementos = ["madera", "fuego", "tierra", "metal", "agua"];
+  const animales = ["rata", "buey", "tigre", "conejo", "dragon", "serpiente", "caballo", "oveja", "mono", "gallo", "perro", "cerdo"];
+
+const añoBase = 1984
+const diferencia = año - añoBase;
+
+const elementoIndex = Math.floor (((diferencia % 10 + 10)% 10) / 2);
+  const animalesIndex = ((diferencia % 12) + 12) % 12;
+
+  return `${elementos[elementoIndex]}
+  ${animales[animalesIndex]}`;
+  }
+
+  for(let año = 1984; año <= 2043; año++) {
+    console.log(`${año}: ${cicloSexagenario(año)}`);
+}
+
+
+
+
+ 
 
 
 
