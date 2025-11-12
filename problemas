@@ -134,6 +134,7 @@ rl.question("introduce el numero separado por comas: ", (input) => {
 });
 */
 
+/*
 
 function cicloSexagenario(año) {
   const elementos = ["madera", "fuego", "tierra", "metal", "agua"];
@@ -152,12 +153,86 @@ const elementoIndex = Math.floor (((diferencia % 10 + 10)% 10) / 2);
   for(let año = 1984; año <= 2043; año++) {
     console.log(`${año}: ${cicloSexagenario(año)}`);
 }
+*/
+
+/*
+function Anagrama(Txt1, Txt2) {
+  const palabra1 = Txt1.toLowerCase();
+  const palabra2 = Txt2.toLowerCase();
+    if(palabra1 === palabra2) return false;
+    if(palabra1.length !== palabra2.length) return false;
+
+    const Pordenada1 = palabra1.split('').sort().join('');
+    const Pordenada2 = palabra2. 
+    
+    split('').sort().join('');
+
+    return Pordenada1 === Pordenada2;
+}
+
+const Txt1 = prompt("introduce la primera palabra:");
+const Txt2 = prompt("Introduce la segunda palabra:");
+
+if(Anagrama(Txt1, Txt2)) {
+  alert(` "${Txt1}" y "${Txt2}" son anagramas.`);
+} else {
+  alert(`"${Txt1}" y "${Txt2}" no son anagramas hajahjuah maldito estupido :v`);
+}
+
+*/
 
 
+function conteodepalabras(Text) {
+ let texto = Text.toLowerCase();
+// convierte a minuscula
+  let limpio = "";
+  for (let i = 0; i < texto.length; i++) {
+    const caracter = texto[i];
 
+    if(
+      (caracter >= 'a' &&  caracter <= 'z') || //letras
+      (caracter >= '0' && caracter <= '9') || // numeros
+      caracter === ' ' // espacios
+    ) {
+      limpio += caracter;
+    }
+  }  
 
+// limpia los signos de puntuación
+  const palabras = [];
+  let palabraActual = "";
+// separación de palabras
+  for(let i = 0; i < limpio.length; i++) {
+    const caracter = limpio[i];
+    if (caracter !== ' ') {
+    palabraActual += caracter;
+  } else if (palabraActual !== "") {
+    palabras.push(palabraActual);
+    palabraActual = "";
+  }
+}
+
+if (palabraActual !== "") {
+  palabras.push(palabraActual)
+}
+// añade la ultima palabra si algo quedó
+
+const contador = {};
+for (let i = 0; i < palabras.length; i++) {
+  const palabra = palabras[i];
+  if (contador[palabra]) {
+    contador[palabra]++;
+  } else {
+    contador[palabra] = 1;
+  }
+} // conteo de palabras
+
+  for (let palabra in contador) {
+  console.log(`"${palabra}" aparece ${contador[palabra]} veces`);
+  }
+}
  
-
+conteodepalabras("hola hola; hola, mundo! muNdo mundo.,");
 
 
 
