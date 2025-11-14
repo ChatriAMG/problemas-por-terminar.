@@ -135,7 +135,6 @@ rl.question("introduce el numero separado por comas: ", (input) => {
 */
 
 /*
-
 function cicloSexagenario(año) {
   const elementos = ["madera", "fuego", "tierra", "metal", "agua"];
   const animales = ["rata", "buey", "tigre", "conejo", "dragon", "serpiente", "caballo", "oveja", "mono", "gallo", "perro", "cerdo"];
@@ -178,10 +177,9 @@ if(Anagrama(Txt1, Txt2)) {
 } else {
   alert(`"${Txt1}" y "${Txt2}" no son anagramas hajahjuah maldito estupido :v`);
 }
-
 */
 
-
+/*
 function conteodepalabras(Text) {
  let texto = Text.toLowerCase();
 // convierte a minuscula
@@ -233,13 +231,29 @@ for (let i = 0; i < palabras.length; i++) {
 }
  
 conteodepalabras("hola hola; hola, mundo! muNdo mundo.,");
+*/
+
+/*
+function pseudoAleatorio(seed) {
+  const a = 1664525;
+  const c = 1013904223;
+  const m = 2 ** 32
+
+  seed = (a * seed + c) % m ;
+  return seed;
+}
+  function getPseudoNumeroAleatorio(min = 0, max = 100) {
+    const seed = Date.now() % 100000;
+    const raw = pseudoAleatorio(seed);
+    const scaled = raw % (max - min + 1) + min;
+    return scaled;
+}
+ console.log(getPseudoNumeroAleatorio());
+*/
 
 
-
-
-
-
-
+try { }
+catch{}
 
 
 
